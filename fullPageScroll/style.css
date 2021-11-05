@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section {
+    height: 100vh; /*MUST BE SPECIFIED; it takes up full height of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    scroll-snap-align: start;
+    /* child elements need 'scroll-snap-align'; controls how it snaps */
+}
+
+
+/* parent container needs 'scroll-snap-type' and 'overflow-y'; height of container must be specified */
+.container {
+    scroll-snap-type: y mandatory; /*could also use proximity */
+    overflow-y: scroll;
+    height: 100vh;
+    /* can also add 'scroll-padding' */
+}
+
+.one {
+    background-color: rgb(36, 164, 138);
+}
+.two {
+    background-color: rgb(211, 79, 79);
+}
+.three {
+    background-color: rgb(67, 91, 175);
+}
+.four {
+    background-color: rgb(36, 164, 142);
+}
